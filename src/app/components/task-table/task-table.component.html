@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <div class="search-container">
+        <div class="search-bar">
+            <label for="search-bar-lbl" class="search-label">Pesquise o seu evento</label>
+            <input id="search-bar-lbl" class="search" name="search" type="text" placeholder="Pesquisar tarefas..."
+                [(ngModel)]="searchQuery" (ngModelChange)="onSearchQueryChange()" />
+        </div>
+        <select class="select" [(ngModel)]="selectedStatus" (ngModelChange)="onStatusChange()">
+            <option value="">Todos os Status</option>
+            <option value="concluída">Concluídas</option>
+            <option value="em processo">Em Processo</option>
+        </select>
+    </div>
+    <div class="button-container">
+        <button (click)="navigate()">Cadastrar Evento</button>
+    </div>
+</div>
+<div class="task-container">
+    <div class="title">  
+        <h2>Lista de Tarefas</h2>
+        <p>Clique no título da coluna para ordenação</p>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th (click)="sortTasks('id')">#</th>
+                <th (click)="sortTasks('title')">Título</th>
+                <th (click)="sortTasks('description')">Descrição</th>
+                <th (click)="sortTasks('completion_date')">Data de Conclusão</th>
+                <th (click)="sortTasks('status')">Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let task of paginatedTasks">
+                <td><strong>{{ task.id }}</strong></td>
+                <td><span class="short-title">{{ task.title | slice:0:30 }}</span></td>
+                <td><span class="short-description">{{ task.description | slice:0:100 }}...</span></td>
+                <td>{{ task.completion_date | date:'dd/MM/yyyy' }}</td>
+                <td>
+                    <span class="status" [ngClass]="{'status-process': !task.status, 'status-completed': task.status}">
+                        {{ task.status ? 'Concluída' : 'Em processo' }}
+                    </span>
+                </td>
+                <td class="actions">
+                    <button (click)="markAsCompleted(task)">{{ task.status ? 'Retomar' : 'Finalizar' }}</button>
+                    <button (click)="openDetail(task)">Visualizar</button>
+                    <button class="btn-delete" (click)="deleteTask(task.id)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <app-task-detail *ngIf="selectedTask" [task]="selectedTask" (close)="selectedTask = null"></app-task-detail>
+
+    <div class="pagination">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">Anterior</button>
+        <span>Página {{ currentPage }} de {{ totalPages }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Próxima</button>
+    </div>
+</div>

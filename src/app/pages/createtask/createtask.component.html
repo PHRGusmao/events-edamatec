@@ -1,0 +1,9 @@
+<div class="create-task-container">
+    <app-task-form 
+    [title]="'Cadastro de Task'" 
+    [primaryBtnText]="'Salvar Task'"
+    [secondaryBtnText]="'Ver tarefas'"
+    (onSubmit)="onTaskSubmit($event)"
+    (onNavigate)="onNavigate()">
+    </app-task-form>
+</div>

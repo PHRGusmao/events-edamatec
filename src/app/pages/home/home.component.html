@@ -1,0 +1,38 @@
+
+<div class="home-container">
+
+    <header class="project-header">
+        <h1>Bem-vindo à Aplicação de Gerenciamento de Tarefas</h1>
+        <p class="intro-text">Desenvolva e gerencie suas tarefas pessoais de forma simples e eficiente.</p>
+    </header>
+
+    <section class="project-description">
+        <h2>Descrição do Projeto</h2>
+        <p>Este projeto é uma aplicação web simples para o cadastro e gerenciamento de tarefas pessoais. O objetivo é
+            fornecer uma plataforma onde você possa adicionar, visualizar, editar e excluir tarefas com facilidade, além
+            de marcar tarefas como concluídas.</p>
+
+        <h3>Requisitos Técnicos</h3>
+        <ul>
+            <li><strong>Frontend (Angular com TypeScript):</strong> Formulário de Cadastro de Tarefas, Listagem de
+                Tarefas, Componentização, Roteamento Básico, Design Responsivo.</li>
+            <li><strong>Backend (NodeJS com Express):</strong> API RESTful para operações CRUD, Conexão com MySQL,
+                Tratamento de erros simples.</li>
+            <li><strong>Banco de Dados (MySQL):</strong> Tabela 'tarefas' com campos como id, título, descrição, data de
+                conclusão e status.</li>
+        </ul>
+
+        <h3>Funcionalidades Extras</h3>
+        <ul>
+            <li>Filtro de Tarefas por Status (Concluídas ou Pendentes).</li>
+            <li>Ordenação das Tarefas por Data de Conclusão ou Criação.</li>
+            <li>Notificações Simples para Lembrar Tarefas Próximas de Conclusão.</li>
+        </ul>
+    </section>
+
+
+    <section class="navigation-buttons">
+        <button (click)="navigateToCreateTask()" class="navigate-button">Cadastrar Nova Tarefa</button>
+        <button (click)="navigateToViewTasks()" class="navigate-button">Ver Tarefas</button>
+    </section>
+</div>

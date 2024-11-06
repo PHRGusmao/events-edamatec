@@ -1,0 +1,60 @@
+<main>
+    <section class="form-section">
+        <form [formGroup]="taskForm" (ngSubmit)="submit()">
+            <h2>{{ title }}</h2>
+            
+            <div class="input-wrapper">
+                <label for="title">Título da Tarefa</label>
+                <div class="input-content">
+                    <input 
+                        formControlName="title"
+                        type="text" 
+                        placeholder="Digite o título da tarefa"
+                        [value]="value.title"
+                    />
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <label for="description">Descrição</label>
+                <div class="input-content">
+                    <textarea 
+                        formControlName="description"
+                        placeholder="Digite a descrição da tarefa"
+                        [value]="value.description">
+                    </textarea>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <label for="completionDate">Data de Conclusão</label>
+                <div class="input-content">
+                    <input 
+                        formControlName="completionDate"
+                        type="date"
+                        [value]="value.completionDate"
+                    />
+                </div>
+            </div>
+            <div class="btn-wrapper">
+                <button 
+                    class="btn-primary" 
+                    type="submit"
+                    [disabled]="!taskForm.valid" 
+                    [ngClass]="{'btn-disabled': !taskForm.valid}"
+                >
+                    {{ primaryBtnText }}
+                </button>
+                <div class="divider">
+                    <div></div>
+                    <span>ou</span>
+                    <div></div>
+                </div>
+                <button 
+                    class="btn-secondary" 
+                    (click)="navigate()"
+                >
+                    {{ secondaryBtnText }}
+                </button>
+            </div>
+        </form>
+    </section>
+</main>

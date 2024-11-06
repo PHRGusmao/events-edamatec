@@ -1,0 +1,32 @@
+<div class="task-detail-overlay" (click)="onClose()"></div>
+
+<div class="task-detail-modal">
+    <div class="header">
+        <h3>Detalhes da Tarefa</h3>
+    </div>
+    <div class="modal-content">
+        <form (ngSubmit)="onSubmit()">
+            <div>
+                <label for="title"><strong>Título:</strong></label>
+                <input id="title" [(ngModel)]="task.title" name="title" required />
+            </div>
+            <div>
+                <label for="description"><strong>Descrição:</strong></label>
+                <textarea id="description" [(ngModel)]="task.description" name="description" required></textarea>
+            </div>
+            <div>
+                <label for="completionDate"><strong>Data de Conclusão:</strong></label>
+                <input type="date" id="completionDate" [(ngModel)]="task.completion_date" name="completionDate" required/>
+            </div>
+            <div>
+                <label for="status"><strong>Status:</strong></label>
+                <select id="status" [(ngModel)]="task.status" name="status">
+                    <option [value]="true">Concluída</option>
+                    <option [value]="false">Em processo</option>
+                </select>
+            </div>
+            <button type="submit">Salvar Alterações</button>
+            <button type="button" (click)="onClose()">Fechar</button>
+        </form>
+    </div>
+</div>
