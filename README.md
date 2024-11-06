@@ -124,6 +124,7 @@ Sinta-se à vontade para contribuir para o projeto! Para contribuir, basta:
 ## 🎉 **Conclusão**
 
 Agora que o ambiente está configurado, você pode começar a desenvolver e testar o sistema. 🖥️
+- http://localhost:4200/home é o incio de tudo
 - Frontend: Angular 🚀
 - Backend: Node.js + Express 🌐
 
