@@ -1,27 +1,126 @@
 # EventsEdamatec
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
+🎉 **EventsEdamatec** é um projeto que consiste em um **Front-end** desenvolvido com **Angular** e um **Back-end** desenvolvido com **Node.js** e **Express**. O sistema foi projetado para gerenciar tarefas e eventos de maneira prática e intuitiva.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ **Pré-requisitos**
 
-## Code scaffolding
+Antes de começar, certifique-se de que você tem as seguintes ferramentas instaladas em sua máquina:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Node.js](https://nodejs.org/) - Para rodar o Back-end e as dependências do Front-end.
+- [Angular CLI](https://angular.io/cli) - Para compilar e rodar o Front-end.
+  
+## ⚡ **Instalação**
 
-## Build
+### 1. **Instalar o Node.js**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Baixe e instale o Node.js na versão mais recente diretamente do [site oficial do Node.js](https://nodejs.org/). Durante a instalação, o **npm** (Node Package Manager) será automaticamente instalado.
 
-## Running unit tests
+### 2. **Instalar o Angular CLI**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para rodar o Front-end, você precisa ter o **Angular CLI** instalado globalmente. Para isso, basta executar o seguinte comando:
 
-## Running end-to-end tests
+```bash
+npm install -g @angular/cli
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 3. **Instalar Dependências do Projeto**
 
-## Further help
+Clone o repositório do projeto:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+git clone https://github.com/PHRGusmao/events-edamatec.git
+```
+
+Acesse a pasta do projeto e instale as dependências:
+```bash
+cd events-edamatec
+```
+```bash
+npm install
+```
+
+## 🚀 **Executando o Projeto**
+
+### 1. **Rodar o Back-end (Node.js + Express)**
+
+O Back-end foi desenvolvido utilizando Node.js com o framework Express. Siga os passos abaixo para rodá-lo:
+- Clone o repositório do Back-end (caso ainda não tenha feito):
+
+```bash
+git clone https://github.com/PHRGusmao/task-manager-backend.git
+```
+
+- Acesse o diretório do Back-end:
+  
+```bash
+cd task-manager-backend
+```
+
+- Instale as dependências do Back-end:
+  
+```bash
+npm install
+```
+
+- Inicie o servidor do Back-end::
+  
+```bash
+npm start
+```
+
+O servidor estará rodando na porta padrão do Node.js: http://localhost:8080.
+
+### 2. **Rodar o Front-end (Angular)**
+No diretório do Front-end (onde você já instalou as dependências):
+```bash
+ng serve
+```
+Isso iniciará o servidor Angular na porta http://localhost:4200. O navegador abrirá automaticamente essa URL ou você pode acessá-la manualmente.
+
+## 🔧 **Dependências Especiais**
+
+Este projeto utiliza as bibliotecas ngx-toastr e @angular/animations para exibir notificações e animar transições de elementos.
+
+### **Instalação de ngx-toastr (Notificações)**
+Para adicionar as notificações, o projeto utiliza a biblioteca ngx-toastr. Para instalá-la, use o seguinte comando:
+```bash
+npm install ngx-toastr --save
+```
+Font: [ngx-toastr - NPM](https://www.npmjs.com/package/ngx-toastr)
+
+### **Instalação de @angular/animations (Animações)**
+O Angular também utiliza @angular/animations para animações do front-end. Para garantir que as animações funcionem corretamente, instale a dependência com:
+```bash
+npm install @angular/animations --save
+```
+
+## 🔄 **Configuração de Portas**
+
+- O Back-end está configurado para rodar na porta padrão do Node.js (http://localhost:8080).
+- O Front-end está configurado para rodar na porta padrão do Angular (http://localhost:4200).
+
+Ambos funcionam de maneira independente, sendo o Angular responsável pela interface e o Node.js pelo gerenciamento dos dados e rotas de API.
+
+## 🧑‍💻 **Documentação Adicional**
+
+Para mais detalhes sobre o Back-end (Node.js + Express), acesse o repositório completo:
+
+[Task Manager Backend - GitHub](https://github.com/PHRGusmao/task-manager-backend)
+
+## 🎯 **Contribuições**
+
+Sinta-se à vontade para contribuir para o projeto! Para contribuir, basta:
+
+- Fazer um fork do repositório.
+- Criar uma branch com a sua feature ou correção.
+- Fazer o commit e enviar um pull request.
+
+## 🎉 **Conclusão**
+
+Agora que o ambiente está configurado, você pode começar a desenvolver e testar o sistema. 🖥️
+- Frontend: Angular 🚀
+- Backend: Node.js + Express 🌐
+
+Divirta-se desenvolvendo e contribuindo para o EventsEdamatec! 🎉
