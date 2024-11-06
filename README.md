@@ -24,8 +24,12 @@ Para rodar o Front-end, você precisa ter o **Angular CLI** instalado globalment
 ```bash
 npm install -g @angular/cli
 ```
+### 3. **Instalar o MySQL**
+Certifique-se de ter o MySQL instalado em sua máquina. Você pode baixar a versão mais recente do MySQL no site oficial. Após a instalação, inicie o MySQL no terminal ou via painel de controle.
 
-### 3. **Instalar Dependências do Projeto**
+Por padrão, o MySQL estará rodando na porta 3306.
+
+### 4. **Instalar Dependências do Projeto**
 
 Clone o repositório do projeto:
 
